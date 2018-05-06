@@ -14,7 +14,7 @@ WORKDIR /home/work
 
 #get cross toolchain from internet
 
-RUN wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2 ./
+RUN wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2
 
 # Copy the current directory contents into the container at /home/work
 COPY  ./gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2  /home/work/
