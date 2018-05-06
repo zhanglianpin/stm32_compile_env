@@ -16,11 +16,13 @@ WORKDIR /home/work
 
 RUN wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2 -P /home/work
 
-# Copy the current directory contents into the container at /home/work
-COPY  /home/work/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2  /home/work/
 
 # Set the working directory to /home/work
 WORKDIR /home/work
+
+# Copy the current directory contents into the container at /home/work
+COPY  /home/work/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2  /home/work/
+
 
 #Install cross toolchain for cortex-M3 processors
 RUN  tar xf gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2  -C /opt \
